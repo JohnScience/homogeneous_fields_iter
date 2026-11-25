@@ -1,0 +1,9 @@
+[package]
+name = "homogeneous-fields"
+version = "0.1.0"
+edition = "2021"
+description = "Traits and derive macros for iterating over homogeneous struct fields"
+license = "MIT OR Apache-2.0"
+
+[dependencies]
+homogeneous-fields-derive = { path = "../homogeneous-fields-derive" }

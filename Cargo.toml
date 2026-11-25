@@ -1,0 +1,7 @@
+[workspace]
+members = [
+    "crates/homogeneous-fields",
+    "crates/homogeneous-fields-derive",
+    "examples/basic",
+]
+resolver = "2"
