@@ -1,8 +1,21 @@
+//! Derive macro implementation for the [`homogeneous-fields`](https://crates.io/crates/homogeneous-fields)
+//! library.
+//!
+//! Most users should depend on `homogeneous-fields`, which re-exports this
+//! derive macro alongside its [`HomogeneousFields`](https://docs.rs/homogeneous-fields/latest/homogeneous_fields/trait.HomogeneousFields.html)
+//! trait.
+
 use proc_macro::TokenStream;
 use quote::quote;
 use syn::{parse_macro_input, Data, DeriveInput, Fields};
 
 #[proc_macro_derive(HomogeneousFields)]
+/// Implements `homogeneous_fields::HomogeneousFields` for a non-empty struct
+/// whose fields all have the same type.
+///
+/// Named fields are labeled with their identifiers, and tuple fields are
+/// labeled with their zero-based indices. The derive rejects enums, unit
+/// structs, and structs with fields of different types.
 pub fn derive_homogeneous_fields(input: TokenStream) -> TokenStream {
     let input = parse_macro_input!(input as DeriveInput);
     match expand_derive(&input) {

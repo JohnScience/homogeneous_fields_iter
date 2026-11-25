@@ -4,14 +4,14 @@ version = 4
 
 [[package]]
 name = "homogeneous-fields"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "homogeneous-fields-derive",
 ]
 
 [[package]]
 name = "homogeneous-fields-derive"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "proc-macro2",
  "quote",
