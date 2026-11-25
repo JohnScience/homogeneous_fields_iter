@@ -4,6 +4,7 @@ version = "0.1.0"
 edition = "2021"
 description = "Derive macro for homogeneous-fields"
 license = "MIT OR Apache-2.0"
+repository = "https://github.com/JohnScience/homogeneous_fields_iter"
 
 [lib]
 proc-macro = true
